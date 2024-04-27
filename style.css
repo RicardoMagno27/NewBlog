@@ -1,0 +1,309 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden; 
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333;
+    font-size: 14px;
+    line-height: 135%;
+    
+}
+
+
+nav{
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
+    background-color: #fff;
+    height: 70px;
+    display: flex;
+width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    position: relative;
+    gap: 25px;
+right: 120px;
+
+
+}
+
+nav a{
+    text-decoration: none;
+
+}
+
+
+.logo{
+    left: 210px;
+    position: relative;
+}
+
+.link{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+
+
+}
+
+.link:hover{
+    color: rgb(236, 37, 236);
+}
+
+
+
+.container{
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.card{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 940px;
+
+}
+
+
+.card-left{
+    position: relative;
+    float: left;
+    width: 32%;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;  
+ 
+}
+
+.row-1{
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+
+.row-1 img{
+    width: 120px;
+  position: relative;
+  left: 30%;
+top: 12px;
+border-radius: 5px 5px 5px 5px;
+
+}
+
+.row-1 p{
+    text-align: left;
+    margin-top: 20px;
+
+}
+.site-descripton{
+    width: 72%;
+margin-left: 40px;
+    font-family: Lato, sans-serif;
+    line-height: 160%;
+}
+
+
+.divider{
+    width: 250px;
+    height: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #c7c7c7;
+}
+.card-rigth{
+    padding-left: 20px;
+
+
+}
+.cards{
+    background-color: #fff;
+    width: 65%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+ 
+}
+
+.low{
+    position: relative;
+    float: right;
+ padding-right: 25px;
+ margin-bottom: 20px;
+
+}
+
+
+h2{
+    text-align: center;
+}
+.link-left{
+display: inline-block;
+flex-direction: column;
+position: relative;
+   width: 100%;
+list-style: none;
+text-align: center;
+padding: 2px 25px;
+padding-bottom: 18px;
+    
+}
+
+.link-left a{
+
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+    color: #000000;
+letter-spacing: 5px;
+line-height: 180%;z-index: 1;
+}
+
+
+
+.text-style:hover{
+color: #ac3838 !important;
+}
+
+
+.img-news{
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+
+}
+
+.img-news img{
+    margin-right: 20px;
+    border-radius: 3px;
+    width: 33,33%;
+    height: 150px;
+    transition: opacity 200ms ease;
+    padding-top: 10px;
+}
+
+
+.row-2{
+    display: flex;
+    flex-direction: row;
+}
+
+.mobile-menu{ cursor: pointer; display: none;}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #030303;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+
+
+@media screen and (max-width:736px){
+ body{
+    overflow-x: hidden;
+ }
+
+
+ .navbar{
+z-index: 1;
+    position: absolute;
+    top: 5.3vh;
+    right: 0;
+    height: 92vh;
+    width: 50vw;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    transform: translateX(100%);
+transition: transform 0.3s ease-in;
+
+}
+
+ .mobile-menu{
+    display: block;
+ }
+
+ .navbar li{
+    margin-left: 0;
+    opacity: 0;
+ }
+
+
+ .navbar.active{
+    transform: translateX(0);
+ }
+
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.mobile-menu.active .line1{
+transform: rotate(-45deg) translate(-8px, 8px);
+}  
+
+.mobile-menu.active .line2{
+opacity: 0;
+}
+
+.mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+
+    .card{
+    width: 100%;
+    display: flex ;
+    flex-direction: column-reverse;
+ }
+
+ .card-left{
+    width: 100%;
+ }
+
+ .card-rigth{
+    width: 100%;
+ }
+
+.row-2{
+    display: block;
+}
+
+.row-2 img{
+    position: relative;
+    width: 100%;
+    height: 192px;
+    margin-right: 0px;
+    margin-bottom: 12px;
+    opacity: 0.9px;
+    box-shadow: 5px 5px #ebe9e9; transition: all 0.3s ease-in-out;
+
+}
+
+
+.row-2 img:hover{
+    opacity: 0.8;
+}
+.logo{
+position: relative;
+margin-right: auto;
+}
+
+}
